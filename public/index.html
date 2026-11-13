@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CipherChat - Secure Messaging</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="chat-container">
+    <header>
+      <h1>🔐 CipherChat</h1>
+      <p>End-to-end encrypted messaging</p>
+      <span id="status">Connecting...</span>
+    </header>
+
+    <main id="messages">
+      <div class="welcome">
+        Welcome to CipherChat!<br>
+        Your private conversation starts here.
+      </div>
+    </main>
+
+    <form id="message-form">
+      <input
+        id="message-input"
+        type="text"
+        placeholder="Write a secure message..."
+        autocomplete="off"
+        required
+      >
+      <button type="submit">Send</button>
+    </form>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
